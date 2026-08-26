@@ -25,7 +25,6 @@
 .banner .content .holder {
   display: flex;
   gap: 16px;
-  border: 1px solid red;
 }
 .banner .content .holder svg {
   min-height: 88px;
