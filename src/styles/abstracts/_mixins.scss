@@ -1,0 +1,25 @@
+@use "./breakpoints" as bp;
+
+@mixin mobile {
+  @media only screen and (max-width: bp.$breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet-small {
+  @media only screen and (max-width: bp.$breakpoint-tablet-small) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: bp.$breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+  @media only screen and (max-width: bp.$breakpoint-desktop) {
+    @content;
+  }
+}

@@ -1,0 +1,109 @@
+@use "./../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as mx;
+
+.banner {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  border: 1px solid $neutral3;
+  display: flex;
+  //align-items: center;
+  // justify-content: space-between;
+  z-index: 1000;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: $neutral1;
+
+  //  background: vars.$color-background;
+  //  border: 1px solid vars.$color-border;
+  // border-radius: vars.$radius-large;
+  // box-shadow: vars.$shadow-large;
+  .content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    //border: 1px solid orange;
+    width: 100%;
+
+    @include mx.tablet-small {
+      flex-direction: column;
+    }
+    .holder {
+      display: flex;
+      gap: 16px;
+      border: 1px solid red;
+      svg {
+        min-height: 88px;
+        min-width: 88px;
+        @include mx.tablet {
+          min-height: 104px;
+          min-width: 104px;
+        }
+        @include mx.mobile {
+          min-height: 48px;
+          min-width: 48px;
+        }
+      }
+      @include mx.tablet-small {
+        width: 100%;
+      }
+      //   @include mx.mobile {
+      //  flex-direction: column;
+      // }
+      .cookieIcon {
+        color: $pink6;
+      }
+    }
+  }
+}
+
+.copy {
+  //  border: 1px solid blue;
+  display: flex;
+  //gap: 4px;
+  flex-direction: column;
+  .button {
+    padding: 0px;
+  }
+  @include mx.desktop-small {
+    max-width: 620px;
+  }
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
+.description {
+  margin-bottom: 12px;
+}
+
+.policyLink {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: $pink6;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  @include mx.tablet {
+    flex-direction: column;
+    align-self: center;
+  }
+  @include mx.tablet-small {
+    flex-direction: row;
+  }
+  @include mx.mobile {
+    flex-direction: column;
+  }
+}
+
+.primaryButton,
+.secondaryButton {
+  cursor: pointer;
+  // border-radius: vars.$radius-pill;
+  padding: 12px 20px;
+}

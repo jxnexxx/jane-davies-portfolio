@@ -1,0 +1,81 @@
+@use "../../../styles/abstracts/variables" as *;
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  .toggle__status {
+    width: 100px;
+    min-width: 120px;
+    // border: 1px solid green;
+    height: 24px;
+    color: $neutral6;
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  .toggle__label {
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__track {
+    position: relative;
+
+    width: 48px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    border-radius: 999px;
+    background-color: $neutral5;
+
+    transition: background-color 200ms ease;
+  }
+
+  &__thumb {
+    position: absolute;
+
+    top: 4px;
+    left: 4px;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+    background-color: $neutral2;
+
+    transition: transform 200ms ease;
+  }
+
+  &--active {
+    .toggle__track {
+      background-color: $pink6;
+    }
+
+    .toggle__thumb {
+      transform: translateX(20px);
+    }
+  }
+
+  &__input:focus-visible + &__track {
+    outline: 2px solid $pink6;
+    outline-offset: 3px;
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    //opacity: 0.6;
+  }
+}

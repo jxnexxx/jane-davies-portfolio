@@ -1,0 +1,42 @@
+@use "./../../../styles/abstracts/variables" as *;
+
+.button {
+  //border: 2px solid red;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: flex;
+  text-wrap: nowrap;
+  text-align: center;
+  align-content: center;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--primary {
+    background-color: $pink6;
+    border: 2px solid $pink6;
+    color: $neutral1;
+    &:hover {
+      background-color: $pink7;
+      border: 2px solid $pink7;
+    }
+  }
+  &--secondary {
+    color: $neutral9;
+    border: 2px solid $neutral5;
+    background-color: inherit;
+    &:hover {
+      border: 2px solid $neutral6;
+    }
+  }
+  &--text {
+    color: $pink6;
+    background-color: inherit;
+    &:hover {
+      color: $pink7;
+    }
+  }
+}

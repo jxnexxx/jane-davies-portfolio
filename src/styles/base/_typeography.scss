@@ -1,0 +1,131 @@
+@use "../abstracts/mixins" as mxn;
+
+$font-heading: var(--font-eb-garamond);
+$font-body: var(--font-geist);
+
+body {
+  font-family: $font-body, sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading, serif;
+}
+
+h1 {
+  font-size: 112px;
+  @include mxn.desktop-small {
+    font-size: 96px;
+  }
+  @include mxn.tablet {
+    font-size: 80px;
+  }
+  @include mxn.tablet-small {
+    font-size: 64px;
+  }
+  @include mxn.mobile {
+    font-size: 48px;
+  }
+}
+
+h2 {
+  font-size: 72px;
+  @include mxn.desktop-small {
+    font-size: 64px;
+  }
+  @include mxn.tablet {
+    font-size: 56px;
+  }
+  @include mxn.tablet-small {
+    font-size: 48px;
+  }
+  @include mxn.mobile {
+    font-size: 40px;
+  }
+  &.content {
+    font-size: 28px;
+    font-family: $font-body, sans-serif;
+    @include mxn.desktop-small {
+      font-size: 28px;
+    }
+    @include mxn.tablet {
+      font-size: 24px;
+    }
+    @include mxn.tablet-small {
+      font-size: 24px;
+    }
+    @include mxn.mobile {
+      font-size: 18px;
+    }
+  }
+}
+
+h3,
+h1.content {
+  font-size: 56px;
+  @include mxn.desktop-small {
+    font-size: 48px;
+  }
+  @include mxn.tablet {
+    font-size: 40px;
+  }
+  @include mxn.tablet-small {
+    font-size: 36px;
+  }
+  @include mxn.mobile {
+    font-size: 32px;
+  }
+}
+
+h4 {
+  font-size: 40px;
+  @include mxn.desktop-small {
+    font-size: 36px;
+  }
+  @include mxn.tablet {
+    font-size: 32px;
+  }
+  @include mxn.tablet-small {
+    font-size: 28px;
+  }
+  @include mxn.mobile {
+    font-size: 26px;
+  }
+}
+
+h5 {
+  font-size: 32px;
+  @include mxn.desktop-small {
+    font-size: 28px;
+  }
+  @include mxn.tablet {
+    font-size: 26px;
+  }
+  @include mxn.tablet-small {
+    font-size: 24px;
+  }
+  @include mxn.mobile {
+    font-size: 22px;
+  }
+}
+
+h6 {
+  font-size: 24px;
+  @include mxn.desktop-small {
+    font-size: 22px;
+  }
+  @include mxn.tablet {
+    font-size: 20px;
+  }
+  @include mxn.tablet-small {
+    font-size: 18px;
+  }
+  @include mxn.mobile {
+    font-size: 18px;
+  }
+}
