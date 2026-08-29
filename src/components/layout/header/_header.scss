@@ -1,0 +1,135 @@
+@use "../../../styles/abstracts/variables" as *;
+@use "../../../styles/abstracts/mixins" as mx;
+
+.header {
+  z-index: 100;
+  padding: 12px 112px;
+  @include mx.desktop-small {
+    padding: 12px 80px;
+  }
+  @include mx.tablet {
+    padding: 12px 48px;
+  }
+  @include mx.tablet-small {
+    padding: 12px 32px;
+  }
+  @include mx.mobile {
+    padding: 16px 16px;
+  }
+  .header-inner {
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header-logo {
+      border: 1px solid blue;
+      width: 100px;
+      height: 56px;
+    }
+    nav {
+      // display: flex;
+      // border: 1px solid orange;
+      ul {
+        display: flex;
+        gap: 36px;
+        list-style: none;
+        //  border: 1px solid blue;
+        align-items: center;
+        @include mx.tablet {
+          opacity: 0;
+          //  transform: translateY(-12px);
+          visibility: hidden;
+          flex-direction: column;
+          position: absolute;
+          top: 80px;
+          left: 0px;
+          text-align: center;
+          width: 100%;
+          //  border: 1px solid blue;
+          background-color: $neutral2;
+          gap: 0px;
+          .header-btn {
+            margin: 16px;
+          }
+        }
+        @include mx.mobile {
+          top: 88px;
+        }
+        li a:not(.header-btn) {
+          color: inherit;
+          text-decoration: none;
+          //border: 1px solid green;
+          display: block;
+
+          text-transform: uppercase;
+          padding: 2px;
+          position: relative;
+          font-weight: 500;
+          @include mx.tablet {
+            padding: 16px;
+            width: 200px;
+          }
+          &:hover {
+            color: $pink6;
+          }
+
+          &:active {
+            color: $pink3;
+            &::after {
+              color: $pink3;
+            }
+          }
+          &.header-link-active {
+            color: $pink7;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+
+            width: 100%;
+            height: 2px;
+            background-color: $pink6;
+
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+          }
+          .header-link-active:hover::after {
+            color: $pink6;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+          }
+        }
+        @include mx.tablet {
+          li:not(:nth-last-child(-n + 2)) {
+            border-bottom: 1px solid $neutral5;
+          }
+        }
+      }
+    }
+
+    .burger-menu-container {
+      display: none;
+      @include mx.tablet {
+        display: flex;
+      }
+    }
+  }
+}
+.open-header {
+  z-index: 10000;
+  @include mx.tablet {
+    background-color: $neutral2;
+    .header-inner nav ul {
+      max-height: 1000px;
+      opacity: 1;
+      transform: translateY(0);
+      transition: 300ms;
+      visibility: visible;
+    }
+  }
+}

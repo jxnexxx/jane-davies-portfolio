@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { EB_Garamond, Geist } from "next/font/google";
 import "./styles.scss";
 import Providers from "./Providers";
+import Header from "@/components/layout/header/Header";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -28,7 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable} ${ebGaramond.variable}`}>
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );
