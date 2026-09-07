@@ -13,7 +13,9 @@ export type IconName =
   | "deviceBrowser"
   | "referringSources"
   | "keyActions"
-  | "info";
+  | "info"
+  | "mail"
+  | "arrow";
 
 export type IconProps = {
   name: IconName;

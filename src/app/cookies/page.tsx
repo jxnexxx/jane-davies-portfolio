@@ -80,7 +80,7 @@ export default function CookiePolicyPage() {
           className={`info ${cookiesOpen === 1 ? "cookie-item--open" : ""}`}
           id="what-are-cookies"
         >
-          <div className="header">
+          <div className="cookie-sect-header">
             <h2 className="content">1. What are cookies?</h2>
             <button
               onClick={() => setCookiesOpen((prev) => (prev === 1 ? null : 1))}
@@ -113,7 +113,7 @@ export default function CookiePolicyPage() {
           className={`info ${cookiesOpen === 2 ? "cookie-item--open" : ""}`}
           id="how-are-cookies-used"
         >
-          <div className="header">
+          <div className="cookie-sect-header">
             <h2 className="content">2. How this website uses cookies</h2>
 
             <button
@@ -148,7 +148,7 @@ export default function CookiePolicyPage() {
           className={`info ${cookiesOpen === 3 ? "cookie-item--open" : ""}`}
           id="necessary-cookies"
         >
-          <div className="header">
+          <div className="cookie-sect-header">
             <h2 className="content">3. Necessary cookies</h2>
 
             <button
@@ -229,7 +229,7 @@ export default function CookiePolicyPage() {
           className={`info ${cookiesOpen === 4 ? "cookie-item--open" : ""}`}
           id="analytics-cookies"
         >
-          <div className="header">
+          <div className="cookie-sect-header">
             <h2 className="content">4. Analytics cookies</h2>
 
             <button
@@ -347,7 +347,7 @@ export default function CookiePolicyPage() {
           className={`info ${cookiesOpen === 5 ? "cookie-item--open" : ""}`}
           id="preference-cookies"
         >
-          <div className="header">
+          <div className="cookie-sect-header">
             <h2 className="content">5. Preference cookies</h2>
 
             <button
@@ -428,7 +428,7 @@ export default function CookiePolicyPage() {
           className={`info ${cookiesOpen === 6 ? "cookie-item--open" : ""}`}
           id="marketing-cookies"
         >
-          <div className="header">
+          <div className="cookie-sect-header">
             <h2 className="content">6. Marketing and advertising cookies</h2>
 
             <button
@@ -459,7 +459,7 @@ export default function CookiePolicyPage() {
           className={`info ${cookiesOpen === 7 ? "cookie-item--open" : ""}`}
           id="manage-cookies"
         >
-          <div className="header">
+          <div className="cookie-sect-header">
             <h2 className="content">7. Managing your preferences</h2>
 
             <button
@@ -537,7 +537,7 @@ export default function CookiePolicyPage() {
           className={`info ${cookiesOpen === 8 ? "cookie-item--open" : ""}`}
           id="browser-controls"
         >
-          <div className="header">
+          <div className="cookie-sect-header">
             <h2 className="content">8. Browser controls</h2>
 
             <button
@@ -569,7 +569,7 @@ export default function CookiePolicyPage() {
           className={`info ${cookiesOpen === 9 ? "cookie-item--open" : ""}`}
           id="cookies-changes"
         >
-          <div className="header">
+          <div className="cookie-sect-header">
             <h2 className="content">9. Changes to this policy</h2>
 
             <button
@@ -608,7 +608,7 @@ export default function CookiePolicyPage() {
           className={`info ${cookiesOpen === 10 ? "cookie-item--open" : ""}`}
           id="contact"
         >
-          <div className="header">
+          <div className="cookie-sect-header">
             <h2 className="content">10. Contact</h2>
 
             <button

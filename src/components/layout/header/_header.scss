@@ -55,7 +55,7 @@
           }
         }
         @include mx.mobile {
-          top: 88px;
+          top: 80px;
         }
         li a:not(.header-btn) {
           color: inherit;
@@ -63,7 +63,7 @@
           //border: 1px solid green;
           display: block;
 
-          text-transform: uppercase;
+          text-transform: capitalize;
           padding: 2px;
           position: relative;
           font-weight: 500;
