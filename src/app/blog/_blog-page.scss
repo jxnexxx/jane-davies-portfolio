@@ -188,6 +188,12 @@
         @media only screen and (max-width: 660px) {
           width: 100%;
         }
+        &:hover {
+          translate: -2px -2px;
+
+          box-shadow: 2px 2px 6px $neutral8;
+          cursor: pointer;
+        }
         .blog-img {
           border: 1px solid blue;
           width: 100%;
