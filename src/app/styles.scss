@@ -7,3 +7,4 @@
 @use "../components/layout/header/header";
 @use "../components/ui/burgerMenu/burger-menu";
 @use "../app/blog/blog-page";
+@use "../app/blog/[slug]/individual-blog-page";

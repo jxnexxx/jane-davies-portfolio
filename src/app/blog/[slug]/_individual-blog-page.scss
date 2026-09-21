@@ -1,0 +1,342 @@
+@use "./../../../styles/abstracts/variables" as *;
+@use "../../../styles/abstracts/mixins" as mx;
+@use "../../../styles/base/typeography" as *;
+
+.individual-blog-page-container {
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 112px 0px;
+  .text {
+    padding: 112px 112px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    .eyebrow {
+      text-transform: uppercase;
+      font-weight: 600;
+      color: $pink7;
+      margin-bottom: -48px;
+      @include mx.tablet {
+        margin-bottom: -40px;
+      }
+      @include mx.mobile {
+        margin-bottom: -32px;
+      }
+    }
+    .excerpt {
+      width: 65%;
+      //  border: 1px solid purple;
+      font-size: 20px;
+      line-height: 26px;
+      color: $neutral8;
+      @include mx.tablet {
+        width: 80%;
+      }
+      @include mx.tablet-small {
+        width: 90%;
+      }
+      @include mx.mobile {
+        width: 100%;
+      }
+    }
+    .date-readlength {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      color: $neutral7;
+      font-size: 18px;
+      font-weight: 500;
+      @include mx.mobile {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .date {
+        width: 200px;
+        //  border: 1px solid red;
+        text-align: right;
+        @include mx.mobile {
+          text-align: center;
+        }
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $neutral7;
+      }
+      .time {
+        width: 200px;
+        // border: 1px solid red;
+        text-align: left;
+        @include mx.mobile {
+          text-align: center;
+        }
+      }
+    }
+    @include mx.desktop-small {
+      padding: 80px 80px;
+    }
+    @include mx.tablet {
+      padding: 48px 48px;
+    }
+    @include mx.tablet-small {
+      padding: 32px 32px;
+    }
+    @include mx.mobile {
+      padding: 16px 16px;
+    }
+  }
+  .hero-img {
+    width: 100%;
+    aspect-ratio: 16/5;
+    //  border: 1px solid blue;
+    display: block;
+  }
+
+  .full-article {
+    // padding: 112px;
+    display: flex;
+    gap: 56px;
+    .article-navigation {
+      width: 300px;
+      border: 1px solid red;
+      padding: 24px;
+      h3 {
+        font-size: 24px;
+        line-height: 28px;
+        font-family: $font-body;
+      }
+      @include mx.tablet {
+        width: 120px;
+      }
+      @include mx.mobile {
+        width: 100%;
+      }
+    }
+    .article-content {
+      width: calc(100% - 356px);
+      padding: 24px 112px 24px 24px;
+      //  border: 1px solid purple;
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      .post-section {
+        .sub-heading {
+          margin-bottom: 24px;
+          font-size: 48px;
+          line-height: 48px;
+          @include mx.desktop-small {
+            font-size: 44px;
+            line-height: 44px;
+          }
+          @include mx.tablet {
+            font-size: 40px;
+            line-height: 40px;
+          }
+          @include mx.tablet-small {
+            font-size: 36px;
+            line-height: 36px;
+          }
+          @include mx.mobile {
+            font-size: 32px;
+            line-height: 32px;
+          }
+        }
+      }
+      .introduction {
+        p {
+          &::first-letter {
+            font-family: $font-heading;
+            font-size: 96px;
+            font-weight: 500;
+            line-height: 56px;
+            float: left;
+            margin-right: 8px;
+            margin-top: 8px;
+          }
+        }
+      }
+      .pullQuote-section {
+        font-size: 16px;
+        line-height: 22px;
+        .section-text {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+        span {
+          padding: 20px;
+          border-radius: 20px;
+          background-color: $pink1;
+          color: $pink8;
+          display: block;
+          font-size: 24px;
+          line-height: 28px;
+          // margin: 24px 0px;
+          font-family: $font-heading;
+          font-style: italic;
+          font-weight: 600;
+          @include mx.tablet-small {
+            font-size: 20px;
+            line-height: 24px;
+            padding: 16px;
+            border-radius: 16px;
+          }
+        }
+      }
+      .editorial-section {
+        border: 1px solid red;
+        // display: flex;
+        .editorial-section-container {
+          display: flex;
+
+          .left-sect-container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 50%;
+            //  border: 1px solid blue;
+            padding-right: 24px;
+            .intro-span {
+              font-size: 24px;
+              line-height: 32px;
+              font-style: italic;
+              font-family: $font-heading;
+            }
+            .top-left-text {
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+              font-size: 16px;
+              line-height: 22px;
+            }
+            .bottom-left-display {
+              display: flex;
+              //flex-direction: column;
+              justify-content: stretch;
+              //  border: 1px solid red;
+              background-color: $pink1;
+              border-radius: 16px;
+              padding: 24px;
+              gap: 20px;
+
+              .display-btn {
+                font-size: 20px;
+                border-radius: 16px;
+                padding: 12px 24px;
+                margin: 50% auto;
+              }
+              hr {
+                border: 1px solid $neutral4;
+              }
+              h4 {
+                font-size: 18px;
+                line-height: 22px;
+                font-family: $font-body;
+                font-weight: 500;
+                margin-bottom: 8px;
+              }
+              .engineer-view-list {
+                padding-left: 20px;
+                list-style-type: none;
+                li {
+                  position: relative;
+                  margin-bottom: 8px;
+                  &::before {
+                    content: "✓";
+                    color: $pink6;
+                    font-weight: bold;
+                    position: absolute;
+                    left: -20px;
+                  }
+                }
+              }
+            }
+          }
+          .right-sect-container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 50%;
+            // border: 1px solid blue;
+            padding-left: 24px;
+            .jobmarket-stats-sect {
+              // border: 1px solid red;
+              background-color: $pink1;
+              border-radius: 16px;
+              padding: 24px;
+              display: flex;
+              flex-direction: column;
+              gap: 24px;
+              h4 {
+                font-size: 24px;
+                line-height: 32px;
+              }
+              .stat {
+                border-top: 2px solid $neutral5;
+                border-bottom: 2px solid $neutral5;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                padding: 16px 0px;
+                margin: -13px 16px;
+                .stat-name {
+                  text-transform: uppercase;
+                  font-weight: 500;
+                  // padding: 0px 16px;
+                }
+                .stat-content {
+                  display: flex;
+                  justify-content: space-between;
+                  // padding: 0px 16px;
+                  strong {
+                    font-size: 24px;
+                    line-height: 30px;
+                  }
+                  span {
+                    color: $pink6;
+                    font-size: 26px;
+                    line-height: 30px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      @include mx.desktop-small {
+        width: calc(100% - 340px);
+        padding: 24px 80px 24px 24px;
+      }
+      @include mx.tablet {
+        width: calc(100% - 144px);
+        padding: 24px 48px 24px 0px;
+      }
+      @include mx.tablet-small {
+        width: calc(100% - 144px);
+        padding: 24px 48px 24px 0px;
+      }
+
+      @include mx.mobile {
+        width: 100%;
+        padding: 16px 16px 16px 16px;
+      }
+    }
+    @include mx.desktop-small {
+      gap: 40px;
+    }
+    @include mx.tablet {
+      gap: 24px;
+    }
+    @include mx.tablet-small {
+      gap: 16px;
+    }
+    @include mx.mobile {
+      flex-direction: column;
+    }
+  }
+}

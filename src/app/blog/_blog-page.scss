@@ -57,6 +57,10 @@
           font-size: 20px;
           line-height: 28px;
           font-weight: 500;
+          .pink-ita {
+            color: $pink7;
+            font-style: italic;
+          }
         }
       }
       img {
@@ -86,12 +90,24 @@
   }
   .sect1 {
     padding: 56px 112px;
-    background-color: $neutral9;
+    //  background-color: $neutral9;
+    position: relative;
     //  color: $neutral1;
     aspect-ratio: 3/1;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    .featured-post-bg-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      left: 0;
+      object-fit: cover;
+    }
+    @include mx.desktop-small {
+      padding: 48px 80px;
+    }
     @include mx.tablet {
       justify-content: center;
       padding: 48px 48px;
@@ -238,7 +254,7 @@
                 height: 32px;
                 width: 32px;
                 border-radius: 50%;
-                border: 1px solid orange;
+                //      border: 1px solid orange;
               }
             }
           }
@@ -263,9 +279,16 @@
     gap: 56px;
     padding: 56px 112px;
     background-color: $pink1;
+    .desktop-cta-blocks {
+      width: calc(50% - 28px);
+      border: 1px solid red;
+    }
     @include mx.desktop-small {
       padding: 40px 80px;
       gap: 48px;
+      .desktop-cta-blocks {
+        width: calc(50% - 20px);
+      }
     }
     @include mx.tablet {
       padding: 40px 48px;

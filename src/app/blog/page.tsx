@@ -12,8 +12,13 @@ export default function BlogPage() {
           <div className="content">
             <div className="text">
               <h1 className="dh1">This is my blog page</h1>
-              <p>I love (talking about) frontent engineering as you can see.</p>
-              <p>Thoughts, lessons & things I've learned along the way.</p>{" "}
+              <p>
+                I love <span className="pink-ita">(talking about)</span>{" "}
+                frontend engineering as you can see.
+              </p>
+              <p>
+                These are thoughts, lessons & things I've learned along the way.
+              </p>{" "}
               <p>
                 A collection of articles about frontend development, design,
                 accessibility and building for the web.
@@ -25,6 +30,11 @@ export default function BlogPage() {
         <section className="sect1">
           {featuredBlog && (
             <article className="featured-article-container blog-entry">
+              <img
+                src={featuredBlog.image}
+                alt="featpost"
+                className="featured-post-bg-img"
+              />
               <span className="featured-post-banner">Featured post</span>
               <div className="blog-info">
                 <h3 className="title">{featuredBlog.title}</h3>
@@ -41,7 +51,11 @@ export default function BlogPage() {
                   <span className="category">{featuredBlog.category}</span>
                 </div>
               </div>
-              <Button variant="primary" className="blog-post-btn">
+              <Button
+                variant="primary"
+                className="blog-post-btn"
+                href={`/blog/${featuredBlog.slug}`}
+              >
                 <span className="btn-text">Read full article</span>
                 <Icon name="arrow" size={24} className="icon" />
               </Button>
@@ -66,7 +80,7 @@ export default function BlogPage() {
                         <span className="full-date">{blog.date}</span>
                       </div>
                       <div className="read-author">
-                        <span className="read-time">{`•  ${blog.readTime}`}</span>
+                        <span className="read-time">{`•  ${blog.readTime} min read`}</span>
                         <img src={blog.authorImg} alt="jane" />
                       </div>
                     </div>
@@ -76,6 +90,7 @@ export default function BlogPage() {
           </div>
         </section>
         <section className="sect3">
+          <img src="#" alt="blocks" className="desktop-cta-blocks" />
           <aside className="newsletter-cta">
             <Icon
               name="mail"
@@ -99,7 +114,6 @@ export default function BlogPage() {
               </Button>
             </div>
           </aside>
-          <img src="#" alt="blocks" className="desktop-cta-blocks" />
         </section>
       </div>
     </>

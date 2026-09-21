@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import BurgerMenu from "@/components/ui/burgerMenu/burgerMenu";
@@ -10,6 +10,7 @@ export default function Header() {
   const pathname = usePathname();
 
   const [isOpen, setIsOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   const links = [
     { label: "Home", href: "/" },
@@ -19,8 +20,27 @@ export default function Header() {
     { label: "Contact", href: "/contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 0);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={`header ${isOpen ? "open-header" : ""}`}>
+    <header
+      className={`header 
+    ${isOpen ? "open-header" : ""} 
+    ${hasScrolled ? "scrolled-header" : ""}
+  `}
+    >
       <div className="header-inner">
         <Link href="/" className="header-logo">
           JD
@@ -35,6 +55,7 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    onClick={() => setIsOpen(false)}
                     className={`header-link ${
                       isActive ? "header-link-active" : ""
                     }`}

@@ -6,6 +6,7 @@
   position: fixed;
   padding: 12px 112px;
   width: 100%;
+  // border: 1px solid red;
   @include mx.desktop-small {
     padding: 12px 80px;
   }
@@ -17,6 +18,11 @@
   }
   @include mx.mobile {
     padding: 16px 16px;
+  }
+  &.scrolled-header {
+    background-color: $neutral2;
+    box-shadow: 0 4px 10px -4px $neutral7;
+    transition: 300ms;
   }
   .header-inner {
     // border: 1px solid red;

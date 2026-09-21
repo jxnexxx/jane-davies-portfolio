@@ -31,6 +31,11 @@
       background-color: $pink7;
       border: 2px solid $pink7;
     }
+    &:active {
+      background-color: $pink2;
+      border: 2px solid $pink2;
+      color: $neutral8;
+    }
   }
   &--secondary {
     color: $neutral9;
