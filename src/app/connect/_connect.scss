@@ -1,0 +1,237 @@
+@use "./../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as mx;
+@use "../../styles/base/typeography" as *;
+
+.connect-page-container {
+  //  border: 1px solid red;
+  .hero-section {
+    //  border: 1px solid blue;
+    display: flex;
+    align-items: stretch;
+    background-color: $pink1;
+    padding: 112px;
+    gap: 56px;
+    @include mx.desktop-small {
+      padding: 112px 80px 80px 80px;
+      gap: 40px;
+    }
+    @include mx.tablet {
+      padding: 112px 48px 48px 48px;
+      gap: 24px;
+      flex-direction: column;
+    }
+    @include mx.tablet-small {
+      padding: 112px 32px 32px 32px;
+      gap: 20px;
+    }
+    @include mx.mobile {
+      padding: 112px 16px 16px 16px;
+      gap: 16px;
+    }
+    .text {
+      width: 50%;
+      // border: 1px solid green;
+      @include mx.desktop-small {
+        width: 60%;
+      }
+      @include mx.tablet {
+        width: 100%;
+      }
+      h1 {
+        letter-spacing: -5%;
+        span {
+          color: $pink6;
+          font-style: italic;
+          font-weight: 500;
+        }
+      }
+      p {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 500;
+      }
+    }
+    .hero-img {
+      width: 50%;
+      aspect-ratio: 3/2;
+      border: 1px solid red;
+      @include mx.desktop-small {
+        width: 40%;
+      }
+      @include mx.tablet {
+        width: 100%;
+      }
+    }
+  }
+  .sect1 {
+    // border: 1px solid blue;
+    padding: 56px 112px;
+    @include mx.desktop-small {
+      padding: 48px 80px;
+    }
+    @include mx.tablet {
+      padding: 48px 48px;
+      //gap: 40px;
+    }
+    @include mx.tablet-small {
+      padding: 32px 32px;
+      //gap: 40px;
+    }
+    @include mx.mobile {
+      padding: 32px 16px;
+      //gap: 40px;
+    }
+    .sect1-text {
+      display: flex;
+      justify-content: space-between;
+      gap: 112px;
+      align-items: flex-end;
+      p {
+        margin-bottom: 24px;
+      }
+
+      @include mx.desktop-small {
+        gap: 80px;
+      }
+      @include mx.tablet {
+        gap: 0px;
+        flex-direction: column;
+        align-items: unset;
+        margin-bottom: 40px;
+        p {
+          margin-bottom: unset;
+        }
+      }
+
+      .sect1-header-text {
+        text-wrap: nowrap;
+        h2 {
+          font-weight: 600;
+          margin-bottom: 8px;
+          @include mx.tablet {
+            margin-bottom: 0px;
+          }
+        }
+        .eyebrow {
+          text-transform: uppercase;
+          color: $neutral7;
+          //margin-bottom: -16px;
+          line-height: 100%;
+        }
+        //   width: 500px;
+      }
+    }
+    .read-options-container {
+      display: flex;
+      gap: 32px;
+      h3 {
+        font-weight: 400;
+        font-size: 40px;
+      }
+      .circle-arrow {
+        border-radius: 50%;
+        padding: 8px 8px;
+        .connect-arrow {
+          color: transparent;
+          transform: rotate(-45deg);
+        }
+      }
+
+      .read-option {
+        //  border: 1px solid red;
+        padding: 112px 24px 32px 24px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .read-option-cta {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-top: auto;
+        }
+        &.blog-option {
+          width: 40%;
+          background-image: url("./../../../public/images/connect/myblog.webp");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          color: $neutral1;
+          .cta-span {
+            color: $neutral5;
+          }
+          @include mx.tablet {
+            width: 100%;
+          }
+        }
+        &.linkedin-option {
+          width: 30%;
+          background-image: url("./../../../public/images/connect/linkedin.webp");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          .circle-arrow {
+            color: $neutral9;
+            border: 1px solid $neutral9;
+            background-color: transparent;
+            &:hover {
+              color: $neutral7;
+              border: 1px solid $neutral7;
+            }
+            &:active {
+              color: $pink6;
+              border: 1px solid $pink6;
+            }
+          }
+
+          .cta-span {
+            color: $neutral9;
+          }
+          @include mx.tablet {
+            width: calc(50% - 14px);
+          }
+          @include mx.mobile {
+            width: 100%;
+          }
+        }
+        &.substack-option {
+          width: 30%;
+          background-image: url("./../../../public/images/connect/substack.webp");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          .circle-arrow {
+            color: $neutral9;
+            border: 1px solid $neutral9;
+            background-color: transparent;
+            &:hover {
+              color: $neutral7;
+              border: 1px solid $neutral7;
+            }
+            &:active {
+              color: $pink6;
+              border: 1px solid $pink6;
+            }
+          }
+
+          .cta-span {
+            color: $neutral9;
+          }
+          @include mx.tablet {
+            width: calc(50% - 14px);
+          }
+          @include mx.mobile {
+            width: 100%;
+          }
+        }
+      }
+      @include mx.tablet {
+        flex-wrap: wrap;
+        gap: 28px;
+      }
+      @include mx.mobile {
+        gap: 16px;
+      }
+    }
+  }
+}

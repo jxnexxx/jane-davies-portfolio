@@ -67,7 +67,7 @@ export default function Header() {
             })}
 
             <li>
-              <Button variant="primary" href="/contact" className="header-btn">
+              <Button variant="primary" href="/connect" className="header-btn">
                 Let's connect
               </Button>
             </li>
