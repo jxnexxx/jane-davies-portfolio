@@ -63,8 +63,49 @@
       }
     }
   }
-  .sect1 {
-    // border: 1px solid blue;
+  .sect-text {
+    display: flex;
+    justify-content: space-between;
+    gap: 112px;
+    align-items: flex-end;
+    p {
+      margin-bottom: 24px;
+    }
+
+    @include mx.desktop-small {
+      gap: 80px;
+    }
+    @include mx.tablet {
+      gap: 0px;
+      flex-direction: column;
+      align-items: unset;
+      margin-bottom: 40px;
+      p {
+        margin-bottom: unset;
+      }
+    }
+
+    .sect-header-text {
+      text-wrap: nowrap;
+      h2 {
+        font-weight: 600;
+        margin-bottom: 8px;
+        @include mx.tablet {
+          margin-bottom: 0px;
+        }
+      }
+      .eyebrow {
+        text-transform: uppercase;
+        color: $neutral7;
+        //margin-bottom: -16px;
+        line-height: 100%;
+      }
+      //   width: 500px;
+    }
+  }
+  .sect1,
+  .sect2,
+  .sect3 {
     padding: 56px 112px;
     @include mx.desktop-small {
       padding: 48px 80px;
@@ -81,46 +122,10 @@
       padding: 32px 16px;
       //gap: 40px;
     }
-    .sect1-text {
-      display: flex;
-      justify-content: space-between;
-      gap: 112px;
-      align-items: flex-end;
-      p {
-        margin-bottom: 24px;
-      }
+  }
+  .sect1 {
+    // border: 1px solid blue;
 
-      @include mx.desktop-small {
-        gap: 80px;
-      }
-      @include mx.tablet {
-        gap: 0px;
-        flex-direction: column;
-        align-items: unset;
-        margin-bottom: 40px;
-        p {
-          margin-bottom: unset;
-        }
-      }
-
-      .sect1-header-text {
-        text-wrap: nowrap;
-        h2 {
-          font-weight: 600;
-          margin-bottom: 8px;
-          @include mx.tablet {
-            margin-bottom: 0px;
-          }
-        }
-        .eyebrow {
-          text-transform: uppercase;
-          color: $neutral7;
-          //margin-bottom: -16px;
-          line-height: 100%;
-        }
-        //   width: 500px;
-      }
-    }
     .read-options-container {
       display: flex;
       gap: 32px;
@@ -231,6 +236,30 @@
       }
       @include mx.mobile {
         gap: 16px;
+      }
+    }
+  }
+  .sect2 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; // border: 1px solid blue;
+    @include mx.tablet {
+      gap: 0px;
+    }
+
+    .topics-container {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      @include mx.tablet-small {
+        gap: 8px;
+      }
+      .topic {
+        padding: 12px;
+        border-radius: 24px;
+        text-transform: uppercase;
+        background-color: $pink2;
+        text-wrap: nowrap;
       }
     }
   }

@@ -67,7 +67,12 @@ export default function Header() {
             })}
 
             <li>
-              <Button variant="primary" href="/connect" className="header-btn">
+              <Button
+                variant="primary"
+                href="/connect"
+                className="header-btn"
+                onClick={() => setIsOpen(false)}
+              >
                 Let's connect
               </Button>
             </li>

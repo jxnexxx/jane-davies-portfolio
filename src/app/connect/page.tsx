@@ -19,15 +19,15 @@ export default function ConnectPage() {
           <img src="#" alt="h" className="hero-img" />
         </section>
         <section className="sect1">
-          <div className="sect1-text">
+          <div className="sect-text">
             {" "}
-            <div className="sect1-header-text">
+            <div className="sect-header-text">
               <span className="eyebrow">articles</span>
               <h2>Read my writing</h2>{" "}
             </div>
             <p>
-              I share my articles in a few different places in a few different
-              formats. So choose the one that works best for you
+              Frontend, the web, career and all the in-between. Here are some of
+              the themes you'll find in my writing
             </p>
           </div>
           <div className="read-options-container">
@@ -77,6 +77,48 @@ export default function ConnectPage() {
                 </Button>
                 <span className="cta-span">SUBSCRIBE ON SUBSTACK</span>
               </div>
+            </div>
+          </div>
+        </section>
+        <section className="sect2">
+          <div className="sect-text">
+            {" "}
+            <div className="sect-header-text">
+              <span className="eyebrow">topics</span>
+              <h2>What I write about</h2>{" "}
+            </div>
+            <p>
+              I share my articles in a few different places in a few different
+              formats. So choose the one that works best for you
+            </p>
+          </div>
+          <div className="topics-container">
+            <p className="topic">career & industry</p>
+            <p className="topic">web performance</p>
+            <p className="topic">react & frameworks</p>
+            <p className="topic">javascript</p>
+            <p className="topic">UI/UX </p>
+            <p className="topic">frontend engineering</p>
+          </div>
+        </section>
+        <section className="sect3">
+          <div className="sect-text">
+            {" "}
+            <div className="sect-header-text">
+              <span className="eyebrow">Latest</span>
+              <h2>Lastest article</h2>{" "}
+            </div>
+            <p>Read it where you prefer</p>
+          </div>
+          <div className="content">
+            <img src="#" alt="#" className="latest-image" />
+            <div className="latest-details">
+              <span className="eyebrow">frontend engineering</span>
+              <h3>Face your frontend</h3>
+              <p>
+                an exploration of frontend stuff and more and more information
+                about this article i want everyone to see it.
+              </p>
             </div>
           </div>
         </section>
