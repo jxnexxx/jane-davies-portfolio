@@ -122,6 +122,50 @@ export default function ConnectPage() {
             </div>
           </div>
         </section>
+        <section className="sect4">
+          <h2>Find me elsewhere</h2>
+          <div className="places">
+            <div className="place">
+              <Icon name="arrow" className="place-icon" />
+              <div className="text">
+                <h3>Github</h3>
+                <p>See what I'm building</p>
+              </div>
+              <Icon name="arrow" className="arrow" />
+            </div>{" "}
+            <hr />
+            <div className="place">
+              <Icon name="arrow" className="place-icon" />
+              <div className="text">
+                <h3>Linkedin</h3>
+                <p>Connect Professionally</p>
+              </div>
+              <Icon name="arrow" className="arrow" />
+            </div>{" "}
+            <hr />
+            <div className="place">
+              <Icon name="arrow" className="place-icon" />
+              <div className="text">
+                <h3>Client Work</h3>
+                <p>See my client work</p>
+              </div>
+              <Icon name="arrow" className="arrow" />
+            </div>
+          </div>
+        </section>
+        <section className="sect5">
+          <h2>Want to have a conversation?</h2>
+          <div className="text-btn-holder">
+            {" "}
+            <p>
+              If you've got a project, opportunity, collaboration or just
+              something interesting to discuss, my inbox is open.
+            </p>
+            <Button>
+              Get in touch <Icon name="arrow" />
+            </Button>
+          </div>
+        </section>
       </div>
     </>
   );
