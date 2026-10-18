@@ -15,6 +15,10 @@ export type IconName =
   | "keyActions"
   | "info"
   | "mail"
+  | "github"
+  | "linkedin"
+  | "company"
+  | "externalLink"
   | "arrow";
 
 export type IconProps = {

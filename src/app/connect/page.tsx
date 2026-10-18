@@ -16,7 +16,11 @@ export default function ConnectPage() {
               elsewhere on the web!
             </p>
           </div>
-          <img src="#" alt="h" className="hero-img" />
+          <img
+            src="#"
+            alt="maybe a plug connecting? or a wifi signal or even a device koppeling..."
+            className="hero-img"
+          />
         </section>
         <section className="sect1">
           <div className="sect-text">
@@ -108,7 +112,6 @@ export default function ConnectPage() {
               <span className="eyebrow">Latest</span>
               <h2>Lastest article</h2>{" "}
             </div>
-            <p>Read it where you prefer</p>
           </div>
           <div className="content">
             <img src="#" alt="#" className="latest-image" />
@@ -119,6 +122,22 @@ export default function ConnectPage() {
                 an exploration of frontend stuff and more and more information
                 about this article i want everyone to see it.
               </p>
+              <Button variant="text">
+                Read full article <Icon name="externalLink" />{" "}
+              </Button>
+            </div>
+            <hr />
+            <div className="external-section">
+              <span>Read it elsewhere</span>
+              <div className="links">
+                <a href="#">
+                  Read on LinkedIn <Icon name="externalLink" />
+                </a>
+                <hr />
+                <a href="#">
+                  Read on Substack <Icon name="externalLink" />
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -126,7 +145,7 @@ export default function ConnectPage() {
           <h2>Find me elsewhere</h2>
           <div className="places">
             <div className="place">
-              <Icon name="arrow" className="place-icon" />
+              <Icon name="github" className="place-icon" />
               <div className="text">
                 <h3>Github</h3>
                 <p>See what I'm building</p>
@@ -135,7 +154,7 @@ export default function ConnectPage() {
             </div>{" "}
             <hr />
             <div className="place">
-              <Icon name="arrow" className="place-icon" />
+              <Icon name="linkedin" className="place-icon" />
               <div className="text">
                 <h3>Linkedin</h3>
                 <p>Connect Professionally</p>
@@ -144,7 +163,7 @@ export default function ConnectPage() {
             </div>{" "}
             <hr />
             <div className="place">
-              <Icon name="arrow" className="place-icon" />
+              <Icon name="company" className="place-icon" />
               <div className="text">
                 <h3>Client Work</h3>
                 <p>See my client work</p>
@@ -161,7 +180,7 @@ export default function ConnectPage() {
               If you've got a project, opportunity, collaboration or just
               something interesting to discuss, my inbox is open.
             </p>
-            <Button>
+            <Button href="/contact">
               Get in touch <Icon name="arrow" />
             </Button>
           </div>

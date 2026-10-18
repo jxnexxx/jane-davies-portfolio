@@ -48,6 +48,10 @@
   &--text {
     color: $pink6;
     background-color: inherit;
+    border: none;
+    padding: 8px 0px;
+    margin-right: 12px;
+    align-items: start;
     &:hover {
       color: $pink7;
     }
