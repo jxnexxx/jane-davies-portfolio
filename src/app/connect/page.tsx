@@ -123,7 +123,7 @@ export default function ConnectPage() {
                 about this article i want everyone to see it.
               </p>
               <Button variant="text">
-                Read full article <Icon name="externalLink" />{" "}
+                <span>Read full article</span> <Icon name="externalLink" />{" "}
               </Button>
             </div>
             <hr />
