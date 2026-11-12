@@ -36,11 +36,13 @@ export default function Form({ formname }: FormProps) {
 
   return (
     <>
-      <h2>This is a {config.formname} form</h2>
-      <form action="">
+      <form action="" className={`${config.formname}-form-container`}>
+        <h2>This is a {config.formname} form</h2>
         {config.fields.map((field) => (
           <div className="formfield" key={field.id}>
-            <label htmlFor={`${field.name}-form-input`}>{field.label}:</label>
+            <label htmlFor={`${field.name}-form-input`}>
+              {field.label} <span className="mandatory">*</span>
+            </label>
 
             {field.type === "textarea" ? (
               <textarea
